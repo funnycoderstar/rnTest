@@ -11,38 +11,22 @@ import {
   Text,
   View
 } from 'react-native';
-import Hello from './src/Hello.js';
-import BlinkApp from './src/BlinkApp.js';
+import Head from './src/home/head.js';
+
 
 export default class rnTest extends Component {
   render() {
     return (
-      <View style={styles.container}>
-        <Hello />
-        <BlinkApp />
+      <View style={styles.page}>
+        <Head />
       </View>
     );
   }
 }
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    // justifyContent: 'center',
-    // alignItems: 'center',
-    backgroundColor: '#F5FCFF',
-    paddingTop: 20,
-  },
-  welcome: {
-    fontSize: 20,
-    textAlign: 'center',
-    margin: 10,
-  },
-  instructions: {
-    textAlign: 'center',
-    color: '#333333',
-    marginBottom: 5,
-  },
-});
+const styles = StyleSheet.create({  
+    page: {  
+        backgroundColor: '#f5f5f5',
+    }});  
 
 AppRegistry.registerComponent('rnTest', () => rnTest);
