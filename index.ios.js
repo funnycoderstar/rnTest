@@ -15,6 +15,7 @@ import {
 import Head from './src/home/head.js';
 import TabNavigator from 'react-native-tab-navigator';
 import Swiper from './src/swiper.js';
+import MenuView from './src/memuView.js'
 
 export default class rnTest extends Component {
     constructor(props) {
@@ -32,7 +33,10 @@ export default class rnTest extends Component {
                         renderIcon={() => <Image source={require('./src/images/tabs/home_normal.png')} style={styles.tabIcon} />}
                         renderSelectedIcon={() => <Image source={require('./src/images/tabs/home_focus.png')} style={styles.tabIcon} />}
                     >
-                        <Swiper />
+                        <View>
+                            <Swiper />
+                            <MenuView />
+                        </View>
                     </TabNavigator.Item>
                     <TabNavigator.Item
                         selected={this.state.selectedTab === 'category'}

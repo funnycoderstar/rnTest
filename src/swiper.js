@@ -18,6 +18,7 @@ const BANNER_IMGS = [
 class swiper extends Component {
     constructor(props) {
         super(props);
+        this._renderPage = this._renderPage.bind(this);
         // 用于构建DataSource对象  
         var dataSource = new ViewPager.DataSource({
             pageHasChanged: (p1, p2) => p1 !== p2,
@@ -42,7 +43,8 @@ class swiper extends Component {
                     dataSource={this.state.dataSource}
                     renderPage={this._renderPage}
                     isLoop={true}
-                    autoPlay={true} />
+                    autoPlay={true}
+                    renderPageIndicator={false} />
 
             </View>
         );
